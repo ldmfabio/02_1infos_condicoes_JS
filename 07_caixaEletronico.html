@@ -6,14 +6,36 @@
     Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
     Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
     */
-
+    //0,5 na prova: Eduardo de Oliveira
     //ENTRADA
-
+    let numero = Number(prompt("Digite o valor para efetuar saque (10-600):"))
 
     //PROCESSAMENTO
-
-    
+    let notasCem = 0
+    let notasCinquenta = 0
+    let notasDez = 0
+    let notasCinco = 0
+    let notasUm = 0
+    if (numero < 10 || numero > 600) {
+        alert("Valor Inválido!")
+    }
+    else {
+        notasCem = Math.floor(numero / 100)
+        numero = numero % 100
+        notasCinquenta = Math.floor(numero / 50)
+        numero = numero % 50
+        notasDez = Math.floor(numero / 10)
+        numero = numero % 10
+        notasCinco = Math.floor(numero / 5)
+        numero = numero % 5
+        notasUm = numero
+    }    
     //SAÍDA
-
-
+    if (notasCem > 0) alert(`Notas de Cem = ${notasCem}`)
+    if (notasCinquenta > 0) {
+        alert(`Notas de Cinquenta = ${notasCinquenta}`)
+    }
+    if (notasDez > 0) { alert(`Notas de Dez = ${notasDez}`) }
+    if (notasCinco > 0) alert(`Notas de Cinco = ${notasCinco}`)
+    if (notasUm > 0) alert(`Notas de Um = ${notasUm}`)
 </script>
