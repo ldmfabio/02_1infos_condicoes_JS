@@ -11,12 +11,24 @@
     */
 
     //ENTRADA
-
+    const telefonou = prompt("Telefonou para a vítima? (V-Verdadeiro | F-Falso)").toUpperCase()
+    const local = prompt("Esteve  no local do crime? (V-Verdadeiro | F-Falso)").toUpperCase()
+    const moradia = prompt("Morava perto da vítima? (V-Verdadeiro | F-Falso)").toUpperCase()
+    const devia = prompt("Devia para a vítima? (V-Verdadeiro | F-Falso)").toUpperCase()
+    const trabalhou = prompt("Trabalhou para a vítima? (V-Verdadeiro | F-Falso)").toUpperCase()
+    let gravidadeSuspeito = 0
 
     //PROCESSAMENTO
+    if (telefonou === "V") gravidadeSuspeito = gravidadeSuspeito + 19
+    if (local === "V") gravidadeSuspeito++
+    if (moradia === "V") gravidadeSuspeito++
+    if (devia === "V") gravidadeSuspeito++
+    if (trabalhou === "V") gravidadeSuspeito++
 
-    
     //SAÍDA
-
+    if (gravidadeSuspeito < 2) alert("Inocente!")
+    else if (gravidadeSuspeito === 2) alert("Suspeito!")
+    else if (gravidadeSuspeito <= 4) alert("Cúmplice!")
+    else (alert("ASSASSINO!!!!"))
 
 </script>
