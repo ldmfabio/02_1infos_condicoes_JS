@@ -4,14 +4,15 @@
     Faça um script que pede dois inteiros e armazene eles em duas variáveis.
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
-
-    //ENTRADA
-
+    let num1 = parseInt("Digite um núermo:")
+    let num2 = parseInt("Digite outro núermo:")
 
     //PROCESSAMENTO
-
+    const troca = num1
+    num1 = num2
+    num2 = troca
 
     //SAÍDA
-
+    document.write(`O primeiro número era ${num2} e agora é ${num1}. O segundo número era ${num1} e agora é ${num2}.`)
 
 </script>
