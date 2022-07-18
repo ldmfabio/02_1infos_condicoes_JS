@@ -11,9 +11,24 @@
     */
 
     //ENTRADA
+    const telefonou = prompt("Telefonou para a vítima? (S-Sim | N-Não)").toUpperCase()
+    const esteve = prompt("Este no local do crime? (S-Sim | N-Não)").toUpperCase()
+    const moraperto = prompt("Mora perto da vítima? (S-Sim | N-Não)").toUpperCase()
+    const devia = prompt("Devia para a vítima? (S-Sim | N-Não)").toUpperCase()
+    const trabalhou = prompt("Trabalhou com a vítima? (S-Sim | N-Não)").toUpperCase()
 
     //PROCESSAMENTO
+    let grauParticipacao = 0
+    if (telefonou === "S") grauParticipacao = grauParticipacao + 1
+    if (esteve === "S") grauParticipacao++
+    if (moraperto === "S") grauParticipacao++
+    if (devia === "S") grauParticipacao++
+    if (trabalhou === "S") grauParticipacao++
     
     //SAÍDA
+    if (grauParticipacao <= 1) document.write("Inocente!")
+    else if (grauParticipacao === 2) document.write("Suspeito!")
+    else if (grauParticipacao <= 4) document.write("Cúmplice!")
+    else document.write("Assassino!")
 
 </script>
