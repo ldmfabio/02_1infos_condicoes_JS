@@ -8,12 +8,25 @@
     */
 
     //ENTRADA
-
+    const numero1 = Number(prompt("Digite um número:"))
+    const numero2 = Number(prompt("Digite outro número:"))
+    const operacao = prompt("Qual operação deseja realizar ( + | - | * | / ):")
 
     //PROCESSAMENTO
-
+    let resultado = 0
+    if (operacao === "+") resultado = numero1 + numero2
+    else if (operacao === "-") resultado = numero1 - numero2
+    else if (operacao === "*") resultado = numero1 * numero2
+    else resultado = numero1 / numero2
     
     //SAÍDA
+    if (resultado % 2 === 0) document.write(`O resultado é um número par, `)
+    else document.write("O resultado é um número ímpar, ")
 
+    if (resultado > 0) document.write(`positivo e `)
+    else document.write(`negativo e `)
+
+    if (resultado % 1 === 0) document.write(`inteiro!`)
+    else document.write(`decimal!`)
 
 </script>
