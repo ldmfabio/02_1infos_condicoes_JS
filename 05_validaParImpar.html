@@ -5,12 +5,14 @@
     */
 
     //ENTRADA
-
+    const numeroParImpar = parseInt(prompt(`Digite um número inteiro:`))
 
     //PROCESSAMENTO
-
+    let mensagemFinal = ``
+    if (numeroParImpar % 2 === 0) mensagemFinal = `O número ${numeroParImpar} é um número par!`
+    else mensagemFinal = `O número ${numeroParImpar} é um número ímpar!`
     
     //SAÍDA
-
+    document.write(mensagemFinal)
 
 </script>

@@ -12,12 +12,16 @@
     */
 
     //ENTRADA
-
+    const turnoEstudo = prompt("Digite o turno em que estuda (M-Matutino | V-Vespertino | N-Noturno):").toUpperCase()
 
     //PROCESSAMENTO
-
+    let cumprimentoEstudante = ""
+    if (turnoEstudo === `M`) cumprimentoEstudante = `Bom Dia!`
+    else if (turnoEstudo === `V`) cumprimentoEstudante = `Boa Tarde!`
+    else if (turnoEstudo === `N`) cumprimentoEstudante = `Boa Noite!`
+    else (cumprimentoEstudante = `Turno Inválido!`)
     
     //SAÍDA
-
+    document.write(cumprimentoEstudante)
 
 </script>

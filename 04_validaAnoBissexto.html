@@ -5,12 +5,18 @@
     */
 
     //ENTRADA
-
+    const anoTeste = parseInt(prompt(`Digite um ano:`))
 
     //PROCESSAMENTO
-
+    let mensagemFinal = ``
+    if ((anoTeste % 400 === 0) || (anoTeste % 4 === 0 && anoTeste % 100 != 0)) {
+        mensagemFinal = `O ano ${anoTeste} é um ano bissexto!`
+    }
+    else {
+        mensagemFinal = `O ano ${anoTeste} não é um ano bissexto!`
+    }
     
     //SAÍDA
-
+    document.write(mensagemFinal)
 
 </script>

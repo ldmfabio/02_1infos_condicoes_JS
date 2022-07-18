@@ -11,10 +11,17 @@
     */
 
     //ENTRADA
-
+    const numero = parseInt(prompt(`Digite um número inteiro menor que 1000:`))
 
     //PROCESSAMENTO
-
+    let mensagemFinal = ``
+    if (numero < 1000) {
+        const centenas = Math.floor(numero / 100)
+        const dezenas = Math.floor(numero / 10) - centenas * 10
+        const unidades = numero % 10
+        alert(unidades)
+    }
+    
     
     //SAÍDA
 

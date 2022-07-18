@@ -5,12 +5,20 @@
     */
 
     //ENTRADA
-
+    const nr1 = parseInt(prompt("Digite o primeiro número:"))
+    const nr2 = parseInt(prompt("Digite o segundo número:"))
+    const nr3 = parseInt(prompt("Digite o terceiro número:"))
 
     //PROCESSAMENTO
-
+    let mensagemFinal = ""
+    if (nr1 > nr2 && nr2 > nr3) mensagemFinal = `N1: ${nr1}, N2: ${nr2}, N3: ${nr3}`
+    if (nr1 > nr3 && nr3 > nr2) mensagemFinal = `N1: ${nr1}, N3: ${nr3}, N2: ${nr2}`
+    if (nr2 > nr1 && nr1 > nr3) mensagemFinal = `N2: ${nr2}, N1: ${nr1}, N3: ${nr3}`
+    if (nr2 > nr3 && nr3 > nr1) mensagemFinal = `N2: ${nr2}, N3: ${nr3}, N1: ${nr1}`
+    if (nr3 > nr1 && nr1 > nr2) mensagemFinal = `N3: ${nr3}, N1: ${nr1}, N1: ${nr2}`
+    if (nr3 > nr2 && nr2 > nr1) mensagemFinal = `N3: ${nr3}, N2: ${nr2}, N1: ${nr1}`
     
     //SAÍDA
-
+    document.write(mensagemFinal)
 
 </script>
