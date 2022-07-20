@@ -8,8 +8,31 @@
     */
    
     //ENTRADA
+    let valorSaque = parseInt(prompt("Digite o valor que deseja realizar o saque:"))
 
     //PROCESSAMENTO
+    let mensagemFinal = ``
+    if (valorSaque >= 10 && valorSaque <= 600) {
+        const notasCem = Math.floor(valorSaque / 100)
+        valorSaque = valorSaque % 100
+        const notasCinquenta = Math.floor(valorSaque / 50)
+        valorSaque = valorSaque % 50
+        const notasDez = Math.floor(valorSaque / 10)
+        valorSaque = valorSaque % 10
+        const notasCinco = Math.floor(valorSaque / 5)
+        const notasUm = valorSaque % 5
+        if (notasCem > 0) mensagemFinal += `Notas de Cem: ${notasCem}<br>`
+        if (notasCinquenta > 0) mensagemFinal += `Notas de Cinquenta: ${notasCinquenta}<br>`
+        if (notasDez > 0) mensagemFinal = mensagemFinal + `Notas de Dez: ${notasDez}<br>`
+        if (notasCinco > 0) mensagemFinal = mensagemFinal + `Notas de Cinco: ${notasCinco}<br>`
+        if (notasUm > 0) mensagemFinal = mensagemFinal + `Notas de Um: ${notasUm}<br>`
+    }
+    else {
+        mensagemFinal = `Valor Inválido`
+    }
+
+    //SAÍDA
+    document.write(mensagemFinal)
 
     //SAÍDA
 
