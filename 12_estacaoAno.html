@@ -6,12 +6,31 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt("Em qual hemisfério você está? (N-Norte | S-Sul)")
+    const mesAno = prompt("Qual o mês atual? (Número do Mês)")
 
     //PROCESSAMENTO
+    let mensagemFinal = ``
+    if (hemisferio === "N" || hemisferio === "S") {
+        if (mesAno > 0 && mesAno <= 12) {
+            if (hemisferio === "N") {
+                if (mesAno < 4) mensagemFinal = "Inverno"
+                else if (mesAno < 7) mensagemFinal = "Primavera"
+                else if (mesAno < 10) mensagemFinal = "Verão"
+                else mensagemFinal = "Outono"
+            }
+            else {
+                if (mesAno < 4) mensagemFinal = "Verão"
+                else if (mesAno < 7) mensagemFinal = "Outono"
+                else if (mesAno < 10) mensagemFinal = "Inverno"
+                else mensagemFinal = "Primavera"
+            }
+        }
+        else mensagemFinal = "Mês Inválido!"
+    }
+    else mensagemFinal = "Hemisfério Inválido!"
 
-    
     //SAÍDA
-
+    document.write(mensagemFinal)
 
 </script>
