@@ -6,12 +6,14 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt("Informe um número:"))
 
     //PROCESSAMENTO
-
+    let mensagemFinal = ``
+    if (numero % 1 === 0) mensagemFinal = `O número ${numero} é INTEIRO!`
+    else mensagemFinal = `O número ${numero} é DECIMAL!`
     
     //SAÍDA
-
+    document.write(mensagemFinal)
 
 </script>
